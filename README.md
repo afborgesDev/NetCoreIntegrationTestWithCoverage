@@ -16,12 +16,12 @@ Tech
 - RabbitMQ
 - .Net Core 3.1
 - dotCover (To collect coverage) download [here](https://www.jetbrains.com/help/dotcover/Running_Coverage_Analysis_from_the_Command_LIne.html)
-- 
+
 
 
 Steps to reproduce:
 
-1) Change the file [LocalExecute.ps1](.\LocalExecute.ps1) to reflect your folder structure.
+1) Change the file [LocalExecute.ps1](entry-point-processor/LocalExecute.ps1) to reflect your folder structure.
 2) provide a RabbitMQ running on LocalHost (or change the configuration on appsettings.json).
 3) Configure the dotCover as a alias on your machine or change the reference for dotCover inside the script to match your DotCover executable.
 4) Execute the LocalExecute.ps1
@@ -60,7 +60,7 @@ Tecnologias
 
 Passos para reproduzir:
 
-1) Modifique o arquivo [LocalExecute.ps1](.\LocalExecute.ps1) para refletir a sua estrutura de pastas.
+1) Modifique o arquivo [LocalExecute.ps1](entry-point-processor/LocalExecute.ps1) para refletir a sua estrutura de pastas.
 2) Uma instancia rodando do RabbitMQ no localhost (ou modifique o arquivo appsettings.json para receber as configurações da conexão).
 3) Configure o DotCover como um alias no windows ou modifique o Script Configure para coincidir com o seu executável do DotCover.
 4) Execute o LocalExecute.ps1
