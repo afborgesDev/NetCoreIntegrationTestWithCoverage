@@ -1,10 +1,10 @@
-﻿using System.IO;
-using System.Threading.Tasks;
-using EntryPoint.Processor.Services;
+﻿using EntryPoint.Processor.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RabbitMQSharedConfigurations;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace EntryPoint.Processor
 {

@@ -1,11 +1,11 @@
-﻿using System;
-using System.Text;
-using System.Threading;
-using EasyNetQ;
+﻿using EasyNetQ;
 using EasyNetQ.Topology;
 using EntryPoint.Processor;
 using FluentAssertions;
 using Newtonsoft.Json;
+using System;
+using System.Text;
+using System.Threading;
 using Xunit;
 
 namespace EntryPoint.Integration.Test
@@ -61,7 +61,8 @@ namespace EntryPoint.Integration.Test
             this.bus.Bind(exchange, this.InitializedIntegrationQueue, routingKey);
 
             var toSendMessage = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(new MessageReceived { Message = EntryMessageIntegrationTest }));
-            this.bus.Publish(exchange, "message.received", true, new MessageProperties() {
+            this.bus.Publish(exchange, "message.received", true, new MessageProperties()
+            {
                 DeliveryMode = MessageDeliveryMode.Persistent,
                 Expiration = TimeSpan.FromSeconds(5).TotalMilliseconds.ToString()
             }, toSendMessage);

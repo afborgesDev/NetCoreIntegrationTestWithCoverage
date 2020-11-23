@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using EasyNetQ;
+﻿using EasyNetQ;
 using Microsoft.Extensions.Configuration;
 using RabbitMQSharedConfigurations.Options;
+using System;
+using System.Collections.Generic;
 
 namespace RabbitMQSharedConfigurations
 {
@@ -25,12 +25,14 @@ namespace RabbitMQSharedConfigurations
             if (configModel is null)
                 throw new ArgumentNullException(nameof(configModel));
 
-            var host = new HostConfiguration {
+            var host = new HostConfiguration
+            {
                 Host = configModel.HostName,
                 Port = (ushort)configModel.Port
             };
 
-            var connectionConfig = new ConnectionConfiguration {
+            var connectionConfig = new ConnectionConfiguration
+            {
                 UserName = configModel.UserName,
                 Password = configModel.Password,
                 VirtualHost = configModel.VirtualHost

@@ -1,5 +1,5 @@
-﻿using System;
-using Polly;
+﻿using Polly;
+using System;
 
 namespace EntryPoint.Processor.Services
 {
